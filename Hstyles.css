@@ -1,0 +1,872 @@
+/* Light 300 */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('OpenSans-Light.woff2') format('woff2');
+}
+
+/* Regular 400 */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('OpenSans-Regular.woff2') format('woff2');
+}
+
+/* Bold 700 */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('OpenSans-Bold.woff2') format('woff2');
+}
+
+
+
+
+/* Regular 400 */
+@font-face {
+  font-family: 'PermanentMarker';
+  font-style: normal;
+  font-weight: 400;
+  src: url('PermanentMarker-Regular.woff2') format('woff2');
+}
+
+
+
+
+body {
+
+   margin:0;
+
+   letter-spacing:1px; 
+
+
+
+   background:#f9f9f9;
+   font-family: "Open Sans", sans-serif;
+ 
+    
+  }
+
+
+
+
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #101820;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    height: 48px;
+    z-index: 1000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.logo img {
+    max-width: 60px;
+    border-radius: 30px;
+
+}
+
+.menu-btn {
+  font-size: 2rem; 
+  cursor: pointer;
+margin-right:40px;
+
+}
+
+nav {
+  display: none;
+  
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: block;
+  padding: 10px 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color:#101820;
+    width: 100%;
+  }
+
+  nav ul {
+    padding: 20px;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.banner {
+
+
+    background-size: cover;
+    background-position: center;
+    height:120px; 
+   
+    display: flex;
+     
+    
+margin-bottom:15px;
+margin-top:70px;
+
+
+
+
+
+
+
+}
+
+
+
+  /* CSS styles for the display container */
+    .Dcontainer {
+      max-width: 40px;
+      max-height: 30px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 80%; /* Adjust width as needed */
+  margin: 0 auto; 
+      
+     
+    }
+
+    /* CSS styles for the symbol and price */
+    .symbol, .price {
+      font-size: 14px;
+    }
+
+    .price {
+      
+      color:grey;
+    }
+
+    .symbol {
+    font-weight: bold;
+    
+    color:#36A84D;
+
+}
+
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.price {
+  animation: blink 3s infinite; /* Adjust the duration as needed */
+}
+
+
+
+
+
+
+
+.heading{
+margin-top:50px;
+margin-left:25px;
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.item {
+    background-color: white;
+    max-width:340px;
+    
+    border-radius: 15px;
+    border-color: grey;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    
+padding-top:15px;
+overflow: hidden;
+padding-bottom:15px;
+
+
+ }
+
+
+
+
+.ribbon {
+      position: absolute;
+    
+    top: -10px;
+    right: -34px;
+    width: 80px;
+    padding:5px 5px;
+    background-color:green;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+}
+
+
+
+
+
+/* Common styles for all containers */
+.Ocontainer, .main-container, .item2, .item3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    max-width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+/* Padding for containers */
+.Ocontainer {
+    padding: 20px;
+
+}
+
+
+/* Padding for containers */
+.item2 {
+    padding-bottom: 20px;
+    padding-top: 15px;
+    
+}
+
+.item3 {
+    padding-top: 15px;
+    
+}
+
+
+
+
+
+
+.About-container {
+        
+       
+        display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: stretch; /* Stretch items to fill the container's height */
+    max-width: 100%; /* Optionally, set a maximum width */
+        
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        margin-top: 10px; 
+        margin-bottom: 50px;
+margin-left:15px;
+margin-right:15px;
+margin-top:100px;
+ 
+font-size:16px;
+ 
+ 
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text {
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+
+margin-top:-30px;
+margin-bottom:-15px;
+
+font-size:18px;
+   color:#101820;
+
+
+}
+
+
+
+
+
+
+hr {
+
+width:100%;
+      border: 0.5px solid #ccc; 
+
+    }
+
+
+
+
+ .additional-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+
+
+
+
+  .additional-item1 {
+    width: 100px;
+    height:120px;
+    
+
+    
+display:flex;
+
+flex-grow: 1;
+flex-wrap: wrap;
+justify-content: space-between;
+padding-left:20px;
+
+
+
+
+}
+
+
+.whale-text{
+
+font-size:24px;
+
+
+
+
+}
+
+
+
+
+
+
+
+.solana-button {
+    background: transparent;
+    border: 1px solid #333; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+    display: inline-block; 
+    text-decoration: none; 
+    color: #333; 
+    
+    font-size: 14px;
+    position: relative; 
+    height:20px;
+    
+
+  }
+
+
+
+
+
+  .solana-button img {
+    width: 14px; 
+    height: auto; 
+    margin-left: 5px; 
+    vertical-align: middle; 
+  }
+
+
+
+
+
+
+
+
+
+
+ .additional-item2 {
+    width: 110px;
+    height: 100px;
+    
+
+}
+
+
+ .zbra-img {
+    width: 70px;
+    height: auto;
+    margin-left: 20px;
+margin-top:10px;
+  }
+
+
+
+
+
+ .additional-item3 {
+    
+    height: 70px;
+   
+    
+      letter-spacing:0px; 
+display:flex;
+flex-grow: 1;
+padding-left:20px;
+padding-right:20px;
+
+}
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+    .btn-container {
+        display: flex;
+        justify-content: flex-start; /* Align items to the start */
+        align-items: center; /* Center items vertically */
+         /* Adjust gap between buttons */
+        margin-bottom: 20px; /* Optional margin for spacing */
+
+    vertical-align: middle;
+justify-content:center;
+  
+ text-align: center;
+
+
+
+
+    }
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+.showMoreBtn {
+font-weight:semibold;
+font-size:25px;
+padding: 8px 16px;
+
+
+min-width: 300px;
+    
+text-align: center;
+    background-color: #a2d5ac;
+    color: #fff; 
+    border: none; 
+    border-radius: 45px; 
+    
+    cursor: pointer; 
+  }
+
+
+
+
+
+
+.mbutton-container {
+
+text-align: center;
+margin-top:-25px;
+margin-bottom:50px;
+
+
+}
+
+
+
+
+
+
+
+.aird-btn {
+
+display: inline-block;
+ 
+  background-color: #36A84D; /* Choose a color that fits your design */
+  color: #fff; /* Text color */
+  
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Adjust font size as needed */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+
+
+}
+
+
+.aird-btn:hover {
+  background-color: #2A7439; /* Darker shade of the button color */
+  
+}
+
+
+
+
+
+.breadcrumbs {
+    
+    font-size: 16px;
+}
+
+.breadcrumbs a {
+    color: green;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+article h2 {
+    color: green;
+}
+
+article h3 {
+    color: green;
+}
+
+
+
+article p {
+    line-height: 1.6;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* External CSS file (e.g., styles.css) */
+.pagination {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination button {
+  font-size:14px;
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color: #36A84D;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #a2d5ac;
+}
+
+.pagination button.active {
+  background-color: #a2d5ac;
+}
+
+
+
+
+.prev-next-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  
+}
+
+.prev-next-btn {
+
+  margin-top: 15px;
+margin-left:15px;
+margin-right:15px;
+  font-size:14px;
+  padding: 5px 10px;
+  height: 30px;
+  border-radius:15px;
+  background-color: #36A84D;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.prev-next-btn:hover {
+  background-color: #a2d5ac;
+}
+
+
+
+
+    
+
+.footer {
+    background-color: #101820;
+    color: #fff;
+    
+    padding: 40px 0;
+margin-top:200px;
+letter-spacing:0px;
+    
+    box-sizing: border-box;
+}
+
+
+
+.footer h4 {
+        color: #fff;
+
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+.footer-st{
+
+color:#36A84D;
+
+
+}
+
+
+
+
+
+.footer p {
+    font-size: 20px;
+width:100%;
+  text-align: left;
+
+ 
+}
+
+
+
+.fcontainer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.col-md-6 {
+    width: 100%;
+text-align: justify;
+}
+
+
+
+
+.newsletter {
+    background-color: #101820;
+    color: #fff;
+    padding: 20px;
+}
+
+.newsletter h4 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    margin-right: 10px;
+height: 25px;
+font-size: 16px;
+}
+
+
+
+
+
+.newsletter-form button {
+    padding: 8px 16px;
+    background-color: #36A84D;
+    color: white;
+    border: none;
+height: 40px;
+    border-radius: 18px;
+margin-top:15px;
+    cursor: pointer;
+font-size: 16px;
+}
+
+
+
+
+
+
+
+.newsletter-form button:hover {
+    background-color: #a2d5ac;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
