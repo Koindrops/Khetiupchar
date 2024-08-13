@@ -117,10 +117,7 @@ nav ul li a {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-  }
+
 
   nav {
     display: none;
