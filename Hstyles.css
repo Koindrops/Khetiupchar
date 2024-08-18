@@ -148,11 +148,61 @@ margin-top:70px;
 
 
 
-
-
-
-
 }
+
+
+
+
+
+.slider-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+}
+
+
+
+.tags-slider {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: grab;
+    
+}
+
+
+
+.tags-wrapper {
+    display: inline-flex;
+}
+
+.tag {
+    background: linear-gradient(to bottom, #10A84D, #101820);
+    color: white;
+    padding: 5px 10px;
+    margin: 5px 25px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.tag:hover {
+    background-color: #0056b3;
+}
+
+.tags-slider:active {
+    cursor: grabbing;
+}
+
+
+
+
+
+
 
 
 
