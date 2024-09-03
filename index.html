@@ -390,6 +390,65 @@ document.getElementById('newsletter-form').addEventListener('submit', function(e
 
 
 
+<script>
+    // Toggle the visibility of the menu
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    }
+
+    // Close menu when a link targeting an ID is clicked
+    document.querySelectorAll('#menu a[href^="#"]').forEach(link => {
+        link.addEventListener('click', () => {
+            const menu = document.getElementById('menu');
+            menu.style.display = 'none';
+        });
+    });
+
+    // Optional: Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+
+<script>
+
+// Toggle the visibility of the menu
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+}
+
+// Close menu when a link targeting an ID is clicked
+document.querySelectorAll('#menu a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default anchor behavior
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            // Smooth scroll to the element
+            window.scrollTo({
+                top: targetElement.offsetTop - 100, // Adjust scroll position for 30px margin
+                behavior: 'smooth'
+            });
+
+            // Close the menu
+            const menu = document.getElementById('menu');
+            menu.style.display = 'none';
+        }
+    });
+});
+
+</script>
+
 
 
 
