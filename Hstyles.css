@@ -75,25 +75,31 @@ header {
 
 }
 
-.menu-btn {
-  font-size: 2rem; 
-  cursor: pointer;
-margin-right:40px;
 
+
+.menu-btn {
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 40px;
 }
 
 nav {
   display: none;
-  
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  max-height: 80vh; /* Limit the height of the dropdown to 80% of the viewport height */
+  background-color: #101820;
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Hide horizontal overflow */
 }
 
 nav ul {
-  list-style-type: none;
-  padding: 0;
+  padding: 20px;
 }
 
 nav ul li {
-  display: block;
   padding: 10px 0;
 }
 
@@ -102,35 +108,9 @@ nav ul li a {
   text-decoration: none;
 }
 
-
-
-  nav {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color:#101820;
-    width: 100%;
-  }
-
-  nav ul {
-    padding: 20px;
-  }
-
-  nav ul li {
-    padding: 10px 0;
-  }
-
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  nav.active {
-    display: block;
-  }
-
-
+nav.active {
+  display: block;
+}
 
 
 
