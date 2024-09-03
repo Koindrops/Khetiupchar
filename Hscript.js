@@ -15,31 +15,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const items = Array.from(container.querySelectorAll(".item"));
     const showMoreBtn = container.nextElementSibling;
 
-    if (items.length > 5) {
+    if (items.length > 4) {
       showMoreBtn.style.display = 'block'; // Show "Show More" button if there are more than 5 items
 
       items.forEach((item, index) => {
-        if (index >= 5) {
+        if (index >= 4) {
           item.style.display = 'none'; // Initially hide extra items beyond the visible limit
         }
       });
 
       showMoreBtn.addEventListener('click', function() {
         items.forEach((item, index) => {
-          if (index >= 5) {
+          if (index >= 4) {
             item.style.display = item.style.display === 'none' ? 'block' : 'none'; // Toggle display of extra items
           }
         });
         showMoreBtn.style.display = 'none'; // Hide "Show More" button after clicking
 
         const allItems = Array.from(container.querySelectorAll(".item"));
-        const numPages = Math.ceil(allItems.length / 10); // Calculate the number of pages
+        const numPages = Math.ceil(allItems.length / 8); // Calculate the number of pages
 
         let currentPage = 1; // Track current page
 
         function showItems(page) {
           allItems.forEach((item, index) => {
-            const isVisible = index >= (page - 1) * 10 && index < page * 10; // Determine if item should be visible on current page
+            const isVisible = index >= (page - 1) * 8 && index < page * 8; // Determine if item should be visible on current page
             item.style.display = isVisible ? 'block' : 'none';
           });
         }
