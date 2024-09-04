@@ -225,9 +225,22 @@ nav.active {
         border-left: 5px solid #4CAF50;
         border-radius: 4px;
       }
+      
+      
+
+
+.banner {
+
+background-size:cover;
+background-position:center;
+height:120px;
+display:flex;
+margin-bottom:15px;
+margin-top:70px;
 
 
 
+}
 
 
 
