@@ -192,7 +192,7 @@ nav.active {
         /* Dots indicator container */
         .dots {
             position: absolute;
-            bottom: 10px;
+            margin-top:-20px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -206,7 +206,7 @@ nav.active {
             background-color: #ddd;
             border-radius: 50%;
             transition: background-color 0.3s ease;
-            animation: blink 1.5s infinite;
+            
         }
 
         /* Active dot */
