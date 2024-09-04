@@ -4,6 +4,46 @@ function toggleMenu() {
 }
 
 
+let currentIndex = 0;
+    const items = document.querySelectorAll('.banner-item');
+    const dots = document.querySelectorAll('.dot');
+    const totalItems = items.length;
+
+    function resetPositions() {
+        items.forEach((item, index) => {
+            item.classList.remove('active', 'prev');
+            item.style.transform = 'translateX(100%)';
+            item.style.opacity = '0';
+        });
+    }
+
+    function showNextItem() {
+        // Slide out the current item
+        items[currentIndex].classList.remove('active');
+        items[currentIndex].classList.add('prev');
+        dots[currentIndex].classList.remove('active');
+
+        // Increment the index, and if it's the last image, reset to 0
+        currentIndex = (currentIndex + 1) % totalItems;
+
+        // Reset the positions of all items before activating the next one
+        resetPositions();
+
+        // Add active class to the new item and dot
+        items[currentIndex].classList.add('active');
+        items[currentIndex].style.transform = 'translateX(0)';
+        items[currentIndex].style.opacity = '1';
+        dots[currentIndex].classList.add('active');
+    }
+
+    setInterval(showNextItem, 3000); // Change the image every 3 seconds
+
+
+
+
+
+
+
 
 
 
