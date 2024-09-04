@@ -524,6 +524,22 @@ font-size:16px;
 
 
 
+ @media (min-width: 1024px) {
+            .layout-container {
+                justify-content: flex-start;
+            }
+
+            .item {
+                margin-right: 10px;
+                margin-left:10px;
+            }
+
+            .item:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+
+
 
 
 
