@@ -55,18 +55,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const items = Array.from(container.querySelectorAll(".item"));
     const showMoreBtn = container.nextElementSibling;
 
-    if (items.length > 4) {
+    if (items.length > 6) {
       showMoreBtn.style.display = 'block'; // Show "Show More" button if there are more than 5 items
 
       items.forEach((item, index) => {
-        if (index >= 4) {
+        if (index >= 6) {
           item.style.display = 'none'; // Initially hide extra items beyond the visible limit
         }
       });
 
       showMoreBtn.addEventListener('click', function() {
         items.forEach((item, index) => {
-          if (index >= 4) {
+          if (index >= 6) {
             item.style.display = item.style.display === 'none' ? 'block' : 'none'; // Toggle display of extra items
           }
         });
